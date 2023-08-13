@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="root">
+            this is the <span id="span" hidden>text of span</span>
+            <style>
+                #root {
+                    background-color: red;
+                }
+            </style>
+            <script>
+                alert("Hello World!");
+            </script>
+        </div>
+        <script>
+            console.log((document.getElementById("span").hidden = false));
+
+            console.log(document.getElementById("root"));
+
+            console.dir(document.getElementById("root"));
+
+            console.log(document.body.firstChild);
+
+            console.log(document.body.firstChild.data);
+
+            console.log(document.body.firstChild.nodeValue);
+
+            console.log(document.body.firstChild.nodeName);
+
+            console.log(document.body.firstElementChild.nodeName);
+
+            console.log(document.getElementById("root").innerText);
+
+            console.log(document.getElementById("root").textContent);
+
+            console.log(document.getElementById("root").innerHTML);
+
+            console.log(document.getElementById("span").outerHTML);
+        </script>
+    </body>
+</html>

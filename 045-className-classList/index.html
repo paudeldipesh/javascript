@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        .bg-black {
+            background-color: black;
+        }
+        .text-white {
+            color: white;
+        }
+        .padding {
+            padding: 10px;
+        }
+    </style>
+    <body>
+        <div id="root">This is root.</div>
+        <script>
+            const rootEl = document.getElementById("root");
+
+            rootEl.className = "bg-black text-white";
+
+            console.log(rootEl.classList);
+
+            rootEl.classList.remove("text-white");
+
+            rootEl.classList.add("text-white");
+
+            rootEl.classList.toggle("padding");
+
+            console.log(rootEl.classList.contains("margin"));
+        </script>
+    </body>
+</html>

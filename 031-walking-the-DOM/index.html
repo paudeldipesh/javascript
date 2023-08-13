@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <script>
+        console.log(document.body);
+    </script>
+    <body>
+        <div class="text-black">text-black</div>
+        <div class="text-black">text-black</div>
+        <div class="text-black">text-black</div>
+        <script>
+            document.getElementsByClassName("text-black")[1].style.color = "red";
+            const HTMLEl = document.documentElement;
+            console.log(HTMLEl);
+            const headEl = document.head;
+            console.log(headEl);
+            const titleString = document.title;
+            console.log(titleString);
+            const bodyEl = document.body;
+            console.log(documentObject);
+        </script>
+    </body>
+</html>

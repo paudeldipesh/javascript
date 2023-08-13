@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body style="font-family: sans-serif; font-size: 24px">
+        this is start of the container (outer)
+        <div id="first-div">
+            this is start of the container (inner)
+            <div id="middle">Middle Of The Text</div>
+            this is end of the container (inner)
+        </div>
+        this is end of the container (outer)
+
+        <script>
+            let divAppendChild = document.createElement("div");
+            divAppendChild.innerText = "appendChild method text";
+            document.body.appendChild(divAppendChild);
+
+            const firstDiv = document.getElementById("first-div");
+
+            let divPrepend = document.createElement("div");
+            divPrepend.innerText = "prepend method text";
+            firstDiv.prepend(divPrepend);
+
+            let divAppend = document.createElement("div");
+            divAppend.innerText = "append method text";
+            firstDiv.append(divAppend);
+
+            let divBefore = document.createElement("div");
+            divBefore.innerText = "before method text";
+            firstDiv.before(divBefore);
+
+            let divAfter = document.createElement("div");
+            divAfter.innerText = "after method text";
+            firstDiv.after(divAfter);
+
+            let middleDiv = document.getElementById("middle");
+            let divReplace = document.createElement("div");
+            divReplace.innerText = "replaceWith method text";
+            middleDiv.replaceWith(divReplace);
+        </script>
+    </body>
+</html>

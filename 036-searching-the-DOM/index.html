@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="container" class="main">
+            <div class="card" id="container-child-one">
+                <img src="code.jpg" alt="code" />
+                <h2 class="card-title">Code Image</h2>
+                <p class="card-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsa quos debitis
+                    dolor velit harum tenetur omnis sed, adipisci quaerat?
+                </p>
+                <button class="btn" id="btn-one" name="btn-one">Add Item</button>
+            </div>
+            <div class="card" id="container-child-two">
+                <img src="code.jpg" alt="code" />
+                <h2 class="card-title">Code Image</h2>
+                <p class="card-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsa quos debitis
+                    dolor velit harum tenetur omnis sed, adipisci quaerat?
+                </p>
+                <button class="btn" id="btn-two" name="btn-two">Add Item</button>
+            </div>
+        </div>
+        <script>
+            document.body.style.fontFamily = "sans-serif";
+            document.body.style.backgroundColor = "black";
+
+            document.getElementsByClassName("card-title")[0].style.color = "lightblue";
+            document.getElementsByClassName("card-title")[1].style.color = "lightblue";
+            document.getElementsByClassName("btn")[0].style.color = "white";
+            document.getElementsByClassName("btn")[1].style.color = "white";
+
+            document.getElementById("container").style.display = "flex";
+            document.getElementById("container-child-one").style.width = "50%";
+            document.getElementById("btn-one").style.borderRadius = "5px";
+            document.getElementById("btn-two").style.borderRadius = "5px";
+
+            document.querySelectorAll(".card-description")[0].style.color = "lightgreen";
+            document.querySelectorAll(".card-description")[1].style.color = "lightpink";
+            document.querySelectorAll(".card")[0].style.margin = "20px";
+            document.querySelectorAll(".card")[1].style.margin = "20px";
+
+            document.querySelector(".main").style.margin = "20px 200px";
+            document.querySelector("#container-child-two").style.width = "50%";
+            document.querySelector("#container-child-two #btn-two").style.backgroundColor = "red";
+            document.querySelector("#container-child-one #btn-one").style.backgroundColor = "blue";
+
+            document.getElementsByTagName("img")[0].style.width = "100%";
+            document.getElementsByTagName("img")[1].style.width = "100%";
+            document.getElementsByTagName("img")[0].style.borderRadius = "10px";
+            document.getElementsByTagName("img")[1].style.borderRadius = "10px";
+
+            document.getElementsByName("btn-one")[0].style.padding = "10px 20px";
+            document.getElementsByName("btn-two")[0].style.padding = "10px 20px";
+            document.getElementsByName("btn-one")[0].style.border = "none";
+            document.getElementsByName("btn-two")[0].style.border = "none";
+        </script>
+    </body>
+</html>

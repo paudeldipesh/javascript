@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About Me</li>
+                <li>Hire Me</li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <p>This is paragraph.</p>
+        </div>
+
+        <script>
+            let bodyEl = document.body;
+            console.log("first child of body is", bodyEl.firstChild);
+            console.log("first element child of body is", bodyEl.firstElementChild);
+            const navEl = bodyEl.firstElementChild;
+
+            const changeCSS = () => {
+                navEl.style.backgroundColor = "red";
+                navEl.firstElementChild.style.listStyleType = "none";
+            };
+            changeCSS();
+        </script>
+    </body>
+</html>

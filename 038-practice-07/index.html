@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            nav ul {
+                display: flex;
+                background-color: black;
+                justify-content: right;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        <script>
+            document.getElementsByTagName(
+                "nav"
+            )[0].firstElementChild.firstElementChild.style.paddingRight = "20px";
+
+            document.getElementsByTagName(
+                "nav"
+            )[0].firstElementChild.lastElementChild.style.paddingLeft = "20px";
+
+            Array.from(document.getElementsByTagName("li")).forEach((element) => {
+                element.style.color = "orangered";
+                element.style.fontWeight = "bolder";
+                element.style.listStyle = "none";
+                element.style.fontFamily = "sans-serif";
+                element.style.marginRight = "20px";
+                element.style.cursor = "pointer";
+            });
+        </script>
+    </body>
+</html>

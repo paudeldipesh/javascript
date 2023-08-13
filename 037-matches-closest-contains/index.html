@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="start" id="first">FIRST</div>
+        <div class="end" id="last">LAST <span class="span-tag" id="span-id">SPAN</span></div>
+        <script>
+            const firstEl = document.getElementById("first");
+            const lastEl = document.getElementById("last");
+            const spanEl = document.getElementById("span-id");
+
+            console.log(firstEl.matches("#first"));
+            console.log(firstEl.matches(".start"));
+            console.log(spanEl.closest("#last"));
+            console.log(spanEl.closest("#first"));
+            console.log(lastEl.contains(spanEl));
+            console.log(spanEl.contains(spanEl));
+        </script>
+    </body>
+</html>

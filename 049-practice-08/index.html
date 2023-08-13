@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: cursive;
+        }
+        .container {
+            height: 200px;
+            width: 200px;
+            border: 5px solid gray;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .circle {
+            height: 150px;
+            width: 150px;
+            color: black;
+            background-color: whitesmoke;
+            border: 5px solid yellowgreen;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bulb-on {
+            background-color: orangered;
+        }
+    </style>
+    <body>
+        <button onclick="alert('I want to be rich.')">Be Rich</button>
+        <button onclick="alert('I want to be success.')">Be Success</button>
+
+        <h1>Links</h1>
+        <a href="https://www.youtube.com/"><button>YouTube</button></a>
+        <a href="https://www.facebook.com/"><button>Facebook</button></a>
+
+        <button>Google</button>
+
+        <div class="container">
+            <div class="circle">BULB</div>
+        </div>
+
+        <script>
+            document.getElementsByTagName("button")[4].addEventListener("click", () => {
+                let url = "https://www.google.com/";
+                let setup = open(url, "", "width=1000, height=500");
+                setup.focus();
+            });
+
+            const fetchContent = async (url) => {
+                const response = await fetch(url);
+                const data = await response.json();
+                return data;
+            };
+            setInterval(async () => {
+                const randomNumber = Math.floor(Math.random() * 200 + 1);
+                let urlOfAPI = `https://jsonplaceholder.typicode.com/todos/${randomNumber}`; // https://jsonplaceholder.typicode.com/
+                console.log(await fetchContent(urlOfAPI));
+                console.log(`${randomNumber} as id.`);
+            }, 7000);
+
+            setInterval(() => {
+                document.getElementsByClassName("circle")[0].classList.toggle("bulb-on");
+            }, 1000);
+        </script>
+    </body>
+</html>

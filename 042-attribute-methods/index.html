@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div
+            id="root"
+            class="div-container"
+            style="color: red"
+            data-game="mario"
+            data-player="dipesh"
+        >
+            This is div tag.
+        </div>
+        <script>
+            const divEl = document.getElementById("root");
+
+            console.log(divEl.hasAttribute("style"));
+            console.log(divEl.getAttribute("style"));
+
+            divEl.setAttribute("paudel", "man");
+            divEl.removeAttribute("class");
+
+            console.log(divEl.attributes);
+            console.log(divEl.attributes.style);
+            console.log(divEl.dataset.game);
+            console.log(divEl.dataset.player);
+        </script>
+    </body>
+</html>

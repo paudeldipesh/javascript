@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div>This is first div.</div>
+        <div>This is second div.</div>
+        <script>
+            console.log(document === document.documentElement.parentNode);
+            console.log(document.documentElement.parentNode);
+            console.log(document.documentElement.parentElement);
+            console.log(document.body.firstElementChild);
+            console.log(document.body.firstElementChild.nextElementSibling);
+            console.log(
+                document.documentElement.lastElementChild.previousElementSibling ===
+                    document.documentElement.firstElementChild
+            );
+            console.log(
+                document.documentElement.firstElementChild.nextElementSibling ===
+                    document.documentElement.lastElementChild
+            );
+        </script>
+    </body>
+</html>

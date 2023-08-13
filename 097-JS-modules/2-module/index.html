@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <script type="module">
+            import dipesh, { sayBye, advanceSayBye } from "./module.js";
+            let text = `<h1>Basic: ${sayBye()}</h1>
+            <h2>Advance: ${advanceSayBye("Rajesh Hamal")}</h2>
+            <h3>Default: ${dipesh()}</h3>`;
+            document.getElementById("demo").innerHTML = text;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                font-family: sans-serif;
+            }
+            .container {
+                background-color: black;
+                padding: 50px;
+                margin: auto;
+                width: 600px;
+                border-radius: 10px;
+            }
+            .container h1 {
+                text-align: center;
+                color: white;
+                margin-top: 0;
+                font-family: cursive;
+            }
+            .container form {
+                border: 2px solid orange;
+                height: 150px;
+                width: 400px;
+                display: flex;
+                margin: 0 auto;
+                flex-direction: column;
+                justify-content: space-around;
+                padding: 20px;
+            }
+            .container form input {
+                height: 30px;
+                background-color: lightblue;
+                border: none;
+                font-weight: bolder;
+                border-radius: 5px;
+                padding: 4px;
+            }
+            .container form input:focus {
+                outline: 2px solid orange;
+            }
+            .container form div {
+                margin: 0 auto;
+            }
+            .container form button {
+                padding: 12px 50px;
+                border-radius: 10px;
+                border: none;
+                background-color: blue;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            .todo {
+                background-color: orchid;
+                width: 800px;
+                margin: 5px auto;
+                padding: 20px;
+                border-radius: 5px;
+            }
+            .todo h2 {
+                color: black;
+                font-family: cursive;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Todo List</h1>
+            <form>
+                <input id="title" type="text" placeholder="Enter Title" autocomplete="off" />
+                <input
+                    id="description"
+                    type="text"
+                    placeholder="Enter Description"
+                    autocomplete="off"
+                />
+                <div>
+                    <button id="submit">Add</button>
+                    <button id="remove" style="background-color: orangered">Remove All</button>
+                </div>
+            </form>
+        </div>
+        <div class="todo">
+            <h1 style="border-bottom: 2px solid green; color: brown">Your Todo Is Here!</h1>
+            <h2 id="todo-title">Add Your Title!</h2>
+            <h2 id="todo-description">Add Your Description!</h2>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

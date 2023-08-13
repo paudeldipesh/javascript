@@ -1,0 +1,1 @@
+alert("Externally-defined script");

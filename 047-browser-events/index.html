@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <button id="buttonZero" onclick="let no = 7; alert(`Hello ${no}!`)">Click Here</button>
+        <button id="buttonOne" onclick="keyUp()">Click Again</button>
+        <button id="buttonTwo">Mouse Event</button>
+
+        <script>
+            Array.from(document.getElementsByTagName("button")).forEach((element) => {
+                element.style.color = "white";
+                element.style.backgroundColor = "black";
+                element.style.border = "none";
+                element.style.padding = "10px";
+                element.style.borderRadius = "5px";
+            });
+
+            function keyUp() {
+                alert("Clicked!");
+            }
+
+            document.getElementById("buttonTwo").onmouseenter = function () {
+                alert("Mouse touched Mouse Event.");
+            };
+        </script>
+    </body>
+</html>

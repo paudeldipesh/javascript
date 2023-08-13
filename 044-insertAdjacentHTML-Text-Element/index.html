@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="root"><div>I'm inside root.</div></div>
+        <div id="first">this is first</div>
+        <script>
+            let rootDiv = document.getElementById("root");
+            rootDiv.insertAdjacentHTML("beforebegin", "<div>beforebegin text</div>");
+            rootDiv.insertAdjacentHTML("afterend", "<div>afterend text</div>");
+            rootDiv.insertAdjacentHTML("afterbegin", "<div>afterbegin text</div>");
+            rootDiv.insertAdjacentHTML("beforeend", "<div>beforeend text</div>");
+
+            document.body.firstChild.remove();
+            console.log(document.body.firstChild);
+        </script>
+    </body>
+</html>

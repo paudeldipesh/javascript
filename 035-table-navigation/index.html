@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <table border="1" align="center">
+            <caption>
+                This is table of friends
+            </caption>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dipesh</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Aman</td>
+                    <td>9</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Abishek</td>
+                    <td>5</td>
+                </tr>
+            </tfoot>
+        </table>
+        <script>
+            const tableEl = document.body.firstElementChild;
+            console.log(tableEl.rows);
+            console.log(tableEl.caption);
+            console.log(tableEl.tHead);
+            console.log(tableEl.tBodies[0]);
+            console.log(tableEl.tFoot);
+            console.log(tableEl.tHead.firstElementChild.cells[1]);
+            console.log(tableEl.tBodies[0].lastElementChild.sectionRowIndex);
+            console.log(tableEl.tBodies[0].lastElementChild.rowIndex);
+            console.log(tableEl.tHead.firstElementChild.lastElementChild.cellIndex);
+        </script>
+    </body>
+</html>
